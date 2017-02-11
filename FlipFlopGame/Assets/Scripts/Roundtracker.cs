@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Roundtracker : MonoBehaviour {
@@ -17,7 +18,9 @@ public class Roundtracker : MonoBehaviour {
 
     public void endround(bool winner)
     {
-        if(winner)
+        Debug.Log("Player 1 Score: " + player1wins);
+        Debug.Log("Player 2 Score: " + player2wins);
+        if (winner)
         {
             player1wins++;
         }
@@ -33,5 +36,7 @@ public class Roundtracker : MonoBehaviour {
             player2wins = 0;
             SceneManager.LoadScene("Game_Over");
         }
+        Debug.Log("Player 1 Score: " + player1wins);
+        Debug.Log("Player 2 Score: " + player2wins);
     }
 }
