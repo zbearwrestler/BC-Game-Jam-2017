@@ -8,7 +8,8 @@ public abstract class Weapon : MonoBehaviour {
 	protected int clipSize;
 	protected int ammo;
 	protected double speed;
-	protected int damage;
+	public GameObject bulletPrefab;
+	public Transform bulletSpawn;
 
 
 
@@ -19,7 +20,8 @@ public abstract class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("fire1")) {
+		if (Input.GetButtonDown("Fire1")) {
+			Debug.Log ("fire");
 			Shoot ();
 		}
 		
@@ -29,13 +31,27 @@ public abstract class Weapon : MonoBehaviour {
 	}
 
 	// Shoot
-	void Shoot() {
-		if (ammo == 0) {
-			Reload ();
-		} else {
-			ammo -= 1;
-		}
-		// TODO: add dmg, if it hits a block/misses 
+	void Shoot() {	
+		//Create the Bullet from the Bullet Prefab
+//
+//		var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+//
+//		// Add velocity to the bullet
+//		bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
+//
+//		// Destroy bullet after 2 seconds
+//		Destroy(bullet, 2.0f);
+
+//		if (ammo == 0) {
+//			Reload ();
+//		} else {
+//			ammo -= 1;
+//			if (ammo == 0) {
+//				Reload ();
+//			}
+//			
+//		}
+
 
 	}
 

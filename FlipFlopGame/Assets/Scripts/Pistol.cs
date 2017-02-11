@@ -11,8 +11,10 @@ public class Pistol : Weapon {
 		clipSize = 10;
 		ammo = clipSize;
 		speed = 1;
-		damage = 1;
+
 		
 	}
+
+
 
 }
