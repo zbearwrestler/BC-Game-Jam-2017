@@ -15,6 +15,13 @@ public class Roundtracker : MonoBehaviour {
 	void Awake () {
         DontDestroyOnLoad(transform.gameObject);
 	}
+    public void startround()
+    {
+        player1wins = 0;
+        player2wins = 0;
+        player1display = 0;
+        player2display = 0;
+    }
 
     public void endround(bool winner)
     {
