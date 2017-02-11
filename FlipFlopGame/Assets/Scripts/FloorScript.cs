@@ -5,26 +5,25 @@ using UnityEngine;
 public class FloorScript : MonoBehaviour {
     int health = 10;
     int healthloss = 0;
+    bulletscript temp;
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Collide");
         if(col.gameObject.tag == "Bullet")
         {
-            healthloss = health - col.gameObject.bulletscript.dmg;
-            col.gameObject.bulletscript.dmg -= health;
-            if(col.gameObject.bulletscript.dmg <= 0)
+            temp = col.gameObject.GetComponent<bulletscript>();
+            healthloss = health - temp.dmg;
+            temp.dmg -= health;
+            health -= healthloss;
+            if(temp.dmg <= 0)
             {
                 Destroy(col.gameObject);
             }
 
-            if(health - healthloss <= 0)
+            if(health <= 0)
             {
                 Destroy(gameObject);
             }
-            else
-            {
-                Destroy(col.gameObject);
-            }
+
         }
     }
 
