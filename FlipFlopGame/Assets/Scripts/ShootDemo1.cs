@@ -21,6 +21,8 @@ public class ShootDemo1 : MonoBehaviour {
 			var bullet = (GameObject) Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 			Debug.Log ("bullet works");
 
+			bullet.transform.forward = transform.forward;
+
 			// Add velocity to the bullet
 			//bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
 
