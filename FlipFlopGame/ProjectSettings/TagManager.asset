@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Pistol_Bullet
+  - Rifle_Bullet
+  - Shotgun_Bullet
   layers:
   - Default
   - TransparentFX

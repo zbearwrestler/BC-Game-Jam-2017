@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114882508129268572}
   m_Layer: 8
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Rifle_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
