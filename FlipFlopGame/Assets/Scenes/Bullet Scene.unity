@@ -91,6 +91,11 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &212597791 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1381220964396512, guid: c86131e7c60854e67a58c1b1c4550d69,
+    type: 2}
+  m_PrefabInternal: {fileID: 1000908247}
 --- !u!1001 &835107250
 Prefab:
   m_ObjectHideFlags: 0
@@ -116,7 +121,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.38268343
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
       propertyPath: m_LocalRotation.z
@@ -124,16 +129,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: shotInterval
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: reloadTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: shotTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598957592423256, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_Name
+      value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 23321378779530960, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6683f0d0a6af744d48a01f34ab8b36ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
   m_IsPrefabParent: 0
@@ -224,6 +249,95 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+--- !u!1001 &1000908247
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348605240197172, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: shotInterval
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: reloadTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: shotTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598957592423256, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+      propertyPath: m_Name
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 23321378779530960, guid: c86131e7c60854e67a58c1b1c4550d69,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a63366e9d6ef7464a870707b4493a042, type: 2}
+    m_RemovedComponents:
+    - {fileID: 114003657367009282, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: c86131e7c60854e67a58c1b1c4550d69, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1859827516 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1598957592423256, guid: c86131e7c60854e67a58c1b1c4550d69,
+    type: 2}
+  m_PrefabInternal: {fileID: 1000908247}
+--- !u!114 &1859827521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1859827516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250a55897f7a941079508db8a6b25972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1219858413573822, guid: f03bdf03605d2405a87daf1632b756d0,
+    type: 2}
+  bulletSpawn: {fileID: 212597791}
+  shotTime: 0
+  shotInterval: 0
+  reloadTime: 0
 --- !u!1 &1908786454
 GameObject:
   m_ObjectHideFlags: 0

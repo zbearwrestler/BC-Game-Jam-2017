@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 65778904130872100}
   - component: {fileID: 23321378779530960}
   - component: {fileID: 114003657367009282}
-  - component: {fileID: 114297874131172076}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -54,7 +53,7 @@ Transform:
   m_GameObject: {fileID: 1598957592423256}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.949256, y: 0.446496, z: 1.0092629}
+  m_LocalScale: {x: 0.6423631, y: 0.46501106, z: 3.3862696}
   m_Children:
   - {fileID: 4707084709695732}
   m_Father: {fileID: 0}
@@ -67,8 +66,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381220964396512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 0, z: 0}
-  m_LocalScale: {x: 1.0184, y: 1.0826765, z: 0.82633483}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6}
+  m_LocalScale: {x: 1.0184, y: 1.0826765, z: 0.7780209}
   m_Children: []
   m_Father: {fileID: 4348605240197172}
   m_RootOrder: 0
@@ -129,25 +128,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598957592423256}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 241f3c3f554d04403b679d735c9abfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1219858413573822, guid: f03bdf03605d2405a87daf1632b756d0,
     type: 2}
-  bulletSpawn: {fileID: 4707084709695732}
---- !u!114 &114297874131172076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1598957592423256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a59599dc0e14ef2a25a077b16d38d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpawn: {fileID: 4707084709695732}
-  bulletPrefab: {fileID: 1219858413573822, guid: f03bdf03605d2405a87daf1632b756d0,
-    type: 2}
+  bulletSpawn: {fileID: 1381220964396512}
+  shotTime: 0
+  shotInterval: 5
+  reloadTime: 5
