@@ -14,6 +14,8 @@ public abstract class Weapon : MonoBehaviour {
 	public float reloadTime;
 	public int bx;
 	public int numOfBullets;
+	public AudioClip gunshot;
+	public AudioSource source;
 
 
 
@@ -28,6 +30,7 @@ public abstract class Weapon : MonoBehaviour {
 		// only shoot when there are bullets and it's time to shoot
 		if (ammo>0 && Time.time>shotTime && Input.GetButton("Fire1")){
 			Shoot();
+
 			shotTime = Time.time+shotInterval; // set next shot time
 		}
 		// only reload when out of bullets and there are ammo clips:
@@ -71,7 +74,11 @@ public abstract class Weapon : MonoBehaviour {
 
 			bullet.GetComponent<Rigidbody> ().velocity = bullet.transform.forward * 6;
 		}
+		source = GetComponent<AudioSource> ();
+		source.PlayOneShot (gunshot, volumeScale: 10);
+	
 			ammo--;
+
 		       
 	}
 
