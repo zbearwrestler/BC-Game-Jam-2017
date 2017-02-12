@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Script : Weapon {
+public class Enemy_Script : AIWeapon {
 
     public GameObject player;
     public GameObject floor;
