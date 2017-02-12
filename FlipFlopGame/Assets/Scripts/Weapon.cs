@@ -12,6 +12,9 @@ public abstract class Weapon : MonoBehaviour {
 	public float shotTime;
 	public float shotInterval;
 	public float reloadTime;
+	public int bx;
+	public int numOfBullets;
+
 
 
 	// Use this for initialization
@@ -43,23 +46,34 @@ public abstract class Weapon : MonoBehaviour {
 
 	// Shoot
 	void Shoot() {	
-
+		for (int i = 0; i < numOfBullets; i++) {
 			GameObject bullet = Instantiate (bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+		
 			//Debug.Log ("bullet works");
 
 			bullet.transform.forward = transform.forward;
 
 			// Add velocity to the bullet
 
-		bullet.GetComponent<Rigidbody> ().AddForce (transform.forward * speed);
+			bullet.GetComponent<Rigidbody> ().AddForce (transform.forward * speed);
 			//Debug.Log ("moving");    
 
 
 			// Destroy bullet after 2 seconds
-			Destroy(bullet, 2.0f);
+			Destroy (bullet, 2.0f);
 
+
+			bullet.transform.forward = transform.forward;
+
+			bullet.GetComponent<Rigidbody> ().AddForce (transform.forward * 100);
+
+			bullet.GetComponent<Rigidbody> ().transform.Rotate (Random.Range (-bx, bx), Random.Range (-bx, bx), Random.Range (-bx, bx));
+
+			bullet.GetComponent<Rigidbody> ().velocity = bullet.transform.forward * 6;
+		}
 			ammo--;
-		}       
+		       
+	}
 
 	// Reload
 	void Reload() {

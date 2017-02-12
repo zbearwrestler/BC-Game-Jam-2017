@@ -11,6 +11,8 @@ public class Rifle : Weapon {
 		speed = 800;
 		reloadTime = 3;
 		shotInterval = 0.1f;
+		bx = 10;
+		numOfBullets = 1;
 	}
 		
 }
