@@ -2,18 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Script : MonoBehaviour {
+public class Enemy_Script : Weapon {
 
     public GameObject player;
+    public GameObject floor;
     public float playerDistance;
     public float rotationDamping;
     public float moveSpeed;
 
 	// Use this for initialization
 	void Start () {
-		if(player == null)
+        //clipSize = 1;
+        //ammo = clipSize;
+        //speed = 500;
+        //reloadTime = 0;
+        //shotInterval = 5f;
+        //bx = 0;
+        //numOfBullets = 1;
+
+        if (player == null)
         {
             player = GameObject.FindWithTag("Player");
+        }
+        if(floor == null)
+        {
+            floor = GameObject.FindWithTag("Floor");
         }
     }
 	
@@ -56,16 +69,12 @@ public class Enemy_Script : MonoBehaviour {
     void attack()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit))
+        if(Physics.Raycast(transform.position, transform.forward - new Vector3(0, 0 ,0), out hit))
         {
             if (hit.collider.gameObject.tag == "Player")
             {
-                if (hit.collider.gameObject.GetComponent<healthScript01>().health > 0f)
-                {
-                    hit.collider.gameObject.GetComponent<healthScript01>().health -= 5f;
+                Shoot();
                 }
-
             }
         }
     }
-}
