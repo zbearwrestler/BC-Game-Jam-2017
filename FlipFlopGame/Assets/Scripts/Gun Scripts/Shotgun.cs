@@ -9,7 +9,7 @@ public class Shotgun : Weapon {
 		clipSize = 5;
 		ammo = clipSize;
 		speed = 800;
-		reloadTime = 3;
+		reloadTime = 4;
 		shotInterval = 1.5f;
 		bx = 30;
 		numOfBullets = 5;

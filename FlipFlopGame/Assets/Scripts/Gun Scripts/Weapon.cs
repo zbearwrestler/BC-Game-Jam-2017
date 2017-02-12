@@ -59,8 +59,8 @@ public abstract class Weapon : MonoBehaviour {
 			//Debug.Log ("moving");    
 
 
-			// Destroy bullet after 2 seconds
-			Destroy (bullet, 2.0f);
+			// Destroy bullet after 10 seconds
+			Destroy (bullet, 10.0f);
 
 
 			bullet.transform.forward = transform.forward;
